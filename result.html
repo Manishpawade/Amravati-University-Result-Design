@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="result.css">
+    <title>SGBAU-Result</title>
+</head>
+
+<body>
+    <section class="section1">
+        <div class="head">
+            <div class="logo">
+                <img src="amt.logo.png" alt="">
+
+            </div>
+            <div class="logoname">
+                <p>Sant Gadge Baba Amravati University</p>
+                <br>
+                <h1>Results - SUMMER 2020</h1>
+            </div>
+        </div><br>
+
+        <div class="studentinfo">
+            Name of the Candidate :<input class="inp" placeholder="Enter your Full Name" type="text" id="fullName">
+            <br>
+            Enrolment No :<input class="inprn" placeholder="Enter PRN No" type="number" id="prnNo">
+            <br>
+            Roll No : <input class="inproll" placeholder="Enter your Roll no" type="number" id="rollNo">
+        </div>
+        <br><br>
+
+        <div class="sub">
+            Maths-1 : <input class="maths1" type="number" placeholder="Enter Maths-1 marks" id="m1">
+            <br>
+            Physics : <input class="phy" type="number" placeholder="Enter Physics marks" id="physics">
+            <br>
+            Mechanics : <input class="mech" type="number" placeholder="Enter Mechanics marks" id="mechanics">
+            <br>
+            ED : <input class="eng" type="number" placeholder="Enter ED marks" id="ed">
+        </div>
+        <button class="submit" onclick="submithandle()"> Submit</button>
+
+    </section>
+
+<h3 style="background-color: grey; color: white; padding-left: 20px;">Result Details</h3>
+<br>
+    <section class="section2">
+        <div class="head">
+            <div class="logo">
+                <img src="amt.logo.png" alt="">
+
+            </div>
+            <div class="logoname">
+                <p>Sant Gadge Baba Amravati University</p>
+                <br>
+                <h1>Results - SUMMER 2020</h1>
+            </div>
+        </div>
+        <div class="semname">
+            <p class="p">Four Year B.E. Semester : First Electrical Engg(Electronics and Power)(CGS)</p><br>
+        </div>
+
+        <div class="candid">
+            <div class="candidateinfo">
+                <h2>Name <span class="s1">: </span></h2>
+                <h2>Roll No <span class="s2">:</span></h2>
+                <h2>PRN <span class="s3">:</span></h2>
+            </div>
+            <div class="candidata">
+                <h2 id="p5"></h2>
+                <h2 id="p7"></h2>
+                <h2 id="p6"></h2>
+
+            </div>
+        </div>
+        <h2 style="margin-left: 20px;">Collage & : <span class="s4"> [0]817-P.R. Pote (Patil)Education & Welfare Trust's
+                Group of Institutions Collage of Engineering and Management , Amravati</span></h2>
+        <h2 style="margin-left: 20px;">Code</h2>
+
+        <table border="1px" class="table">
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+                <th>Grade Point</th>
+                <th>Grade</th>
+                <th>Remarks</th>
+            </tr>
+            <tr>
+                <td>Maths-1</td>
+                <td>
+                    <p id="p1"></p>
+                </td>
+                <!-- for grades in pointers -->
+                <td id="gdpt"></td>
+                <!-- for grades in alphabets -->
+                <td id="grad"></td>   
+                <td></td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>
+                    <p id="p2"></p>
+                </td>
+                <td id="gdpt1"></td>
+                <td id="grad1"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mechanics</td>
+                <td>
+                    <p id="p3"></p>
+                </td>
+                <td id="gdpt2"></td>
+                <td id="grad2"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ED</td>
+                <td>
+                    <p id="p4"></p>
+                </td>
+                <td id="gdpt3"></td>
+                <td id="grad3"></td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+
+        <div  class="ada">
+            <div>
+            <h1 style="margin-left: 350px;">Max-Marks : <span id="p8"></span></h1>
+        </div>
+        <div>
+            <h1 style="margin-left: 150px;"> Percentage :<span id="p9"></span></h1>
+        </div>
+        <div>
+            <h1 style="margin-left: 150px;">Result : <span id="res"></span></h1>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h3>Date of Declaration : <span id="time"></span></h3>
+            <h4 style="margin-left: 150px;"> @ = Passed by incentive marks vid ordinance no. 1 of 1985 </h4>
+            <h4 style="margin-left: 150px"> * = Passed by Grace marks vid ordinance no. 18 of 2001 </h4>
+            <h4 style="margin-left: 150px"> ** = Passed by conditional marks vid ordinance no. 18 of 2001</h4>
+            <h4 style="margin-left: 150px"> * Sant Gadge Baba Amravati University, is not responsible for any error that
+                may have incepeded due to internet errors and bugs in the result being published on net.</h4>
+            <h4 style="margin-left: 150px;"><span style="color: red;">"The Result/Marks statements published on net are
+                    for immediate information to the students"</span>Original marksheets are being issued by the
+                university via respective collages and only these marks statements is considered as <span
+                    style="color: red;">Authentic for any purpose</span></h4>
+        </div>
+        <br>
+    </section>
+    <br>
+
+
+
+
+    <script>
+        function submithandle() {
+            var fullName = document.getElementById("fullName").value;
+            document.getElementById("p5").innerHTML = fullName;
+
+            var prnNo = document.getElementById("prnNo").value;
+            document.getElementById("p6").innerHTML = prnNo;
+
+            var rollNo = document.getElementById("rollNo").value;
+            document.getElementById("p7").innerHTML = rollNo;
+
+            var m1 = document.getElementById("m1").value;
+            document.getElementById("p1").innerHTML = m1;
+
+            var physics = document.getElementById("physics").value;
+            document.getElementById("p2").innerHTML = physics;
+
+            var mechanics = document.getElementById("mechanics").value;
+            document.getElementById("p3").innerHTML = mechanics;
+
+            var ed = document.getElementById("ed").value;
+            document.getElementById("p4").innerHTML = ed;
+            
+            // for m1 grades
+            if(m1 >= 90 && m1 <= 100)
+            document.getElementById("grad").textContent ='AA';
+            else if(m1 >= 80 && m1 < 90)
+            document.getElementById("grad").textContent = 'AB';
+            else if(m1 >= 70 && m1 < 80)
+            document.getElementById("grad").textContent = 'BA';
+            else if(m1 >= 60 && m1 < 70)
+            document.getElementById("grad").textContent = 'BB';
+            else if(m1 >= 50 && m1 < 60)
+            document.getElementById("grad").textContent = 'CA';
+            else if(m1 >= 40 && m1 < 50)
+            document.getElementById("grad").textContent = 'CB';
+            else
+            document.getElementById("grad").textContent = 'CC'
+
+        // for physics grades
+            if(physics >= 90 && physics <= 100)
+            document.getElementById("grad1").textContent = 'AA';
+            else if(physics >= 80 && physics < 90)
+            document.getElementById("grad1").textContent = 'AB';
+            else if(physics >= 70 && physics < 80)
+            document.getElementById("grad1").textContent = 'BA';
+            else if(physics >= 60 && physics < 70)
+            document.getElementById("grad1").textContent = 'BB';
+            else if(physics >= 50 && physics < 60)
+            document.getElementById("grad1").textContent = 'CA';
+            else if(physics >= 40 && physics < 50)
+            document.getElementById("grad1").textContent = 'CB';
+            else
+            document.getElementById("grad1").textContent = 'CC'
+
+
+            // for mechanics grades
+            if(mechanics >= 90 && mechanics <= 100)
+            document.getElementById("grad2").textContent = 'AA';
+            else if(mechanics >= 80 && mechanics < 90)
+            document.getElementById("grad2").textContent = 'AB';
+            else if(mechanics >= 70 && mechanics < 80)
+            document.getElementById("grad2").textContent = 'BA';
+            else if(mechanics >= 60 && mechanics < 70)
+            document.getElementById("grad2").textContent = 'BB';
+            else if(mechanics >= 50 && mechanics < 60)
+            document.getElementById("grad2").textContent = 'CA';
+            else if(mechanics >= 40 && mechanics < 50)
+            document.getElementById("grad2").textContent = 'CB';
+            else
+            document.getElementById("grad2").textContent = 'CC'
+
+            // for ed grades
+            if(ed >= 90 && ed <= 100)
+            document.getElementById("grad3").textContent = 'AA';
+            else if(ed >= 80 && ed < 90)
+            document.getElementById("grad3").textContent = 'AB';
+            else if(ed >= 70 && ed < 80)
+            document.getElementById("grad3").textContent = 'BA';
+            else if(ed >= 60 && ed < 70)
+            document.getElementById("grad3").textContent = 'BB';
+            else if(ed >= 50 && ed < 60)
+            document.getElementById("grad3").textContent = 'CA';
+            else if(ed >= 40 && ed < 50)
+            document.getElementById("grad3").textContent = 'CB';
+            else 
+            document.getElementById("grad3").textContent = 'CC'
+
+            // for total of all subjects
+            total = parseInt(m1) + parseInt(physics) + parseInt(mechanics) + parseInt(ed);
+            console.log(total);
+            document.getElementById("p8").innerHTML = total;
+
+           //    for percentages
+            per = total / 400 * 100;
+            document.getElementById("p9").innerHTML = per;
+            
+            // for grade points of m1
+            if(m1 >= 95 && m1 <= 100)
+            document.getElementById("gdpt").textContent = '10';
+            else if(m1 >= 90 && m1 < 95)
+            document.getElementById("gdpt").textContent = '9.5';
+            else if(m1 >= 80 && m1 < 90)
+            document.getElementById("gdpt").textContent = '9';
+            else if(m1 >= 70 && m1 < 80)
+            document.getElementById("gdpt").textContent = '8';
+            else if(m1 >= 60 && m1 < 70)
+            document.getElementById("gdpt").textContent = '7';
+            else if(m1 >= 50 && m1 < 60)
+            document.getElementById("gdpt").textContent = '6';
+            else if(m1 >= 40 && m1 <50)
+            document.getElementById("gdpt").textContent = '5';
+            else if(m1 >= 30 && m1 <40)
+            document.getElementById("gdpt").textContent = '4';
+            else if(m1 >= 20 && m1 <30)
+            document.getElementById("gdpt").textContent = '3';
+            else if(m1 >= 10 && m1 <20)
+            document.getElementById("gdpt").textContent = '2';
+            else if(m1 >= 1 && m1 <10)
+            document.getElementById("gdpt").textContent = '1';
+            else
+            document.getElementById("gdpt").textContent ='0'
+
+
+            // for grade points of physics
+            if(physics >= 95 && physics <= 100)
+            document.getElementById("gdpt1").textContent = '10';
+            else if(physics >= 90 && physics < 95)
+            document.getElementById("gdpt1").textContent = '9.5';
+            else if(physics >= 80 && physics < 90)
+            document.getElementById("gdpt1").textContent = '9';
+            else if(physics >= 70 && physics < 80)
+            document.getElementById("gdpt1").textContent = '8';
+            else if(physics >= 60 && physics < 70)
+            document.getElementById("gdpt1").textContent = '7';
+            else if(physics >= 50 && physics < 60)
+            document.getElementById("gdpt1").textContent = '6';
+            else if(physics >= 40 && physics < 50 )
+            document.getElementById("gdpt1").textContent = '5';
+            else if(physics >= 30 && physics <40)
+            document.getElementById("gdpt1").textContent = '4';
+            else if(physics >= 20 && physics <30)
+            document.getElementById("gdpt1").textContent = '3';
+            else if(physics >= 10 && physics <20)
+            document.getElementById("gdpt1").textContent = '2';
+            else if(physics >= 1 && physics <10)
+            document.getElementById("gdpt1").textContent = '1';
+            else
+            document.getElementById("gdpt1").textContent ='0'
+           
+
+            // for mechanics grade points
+            if(mechanics >= 95 && mechanics <= 100)
+            document.getElementById("gdpt2").textContent = '10';
+            else if(mechanics >= 90 && mechanics < 95)
+            document.getElementById("gdpt2").textContent = '9.5';
+            else if(mechanics >= 80 && mechanics< 90)
+            document.getElementById("gdpt2").textContent = '9';
+            else if(mechanics >= 70 && mechanics < 80)
+            document.getElementById("gdpt2").textContent = '8';
+            else if(mechanics >= 60 && mechanics < 70)
+            document.getElementById("gdpt2").textContent = '7';
+            else if(mechanics >= 50 && mechanics < 60)
+            document.getElementById("gdpt2").textContent = '6';
+            else if(mechanics >= 40 && mechanics < 50 )
+            document.getElementById("gdpt2").textContent = '5';
+            else if(mechanics >= 30 && mechanics <40)
+            document.getElementById("gdpt2").textContent = '4';
+            else if(mechanics >= 20 && mechanics <30)
+            document.getElementById("gdpt2").textContent = '3';
+            else if(mechanics >= 10 && mechanics <20)
+            document.getElementById("gdpt2").textContent = '2';
+            else if(mechanics >= 1 && mechanics <10)
+            document.getElementById("gdpt2").textContent = '1';
+            else
+            document.getElementById("gdpt2").textContent ='0'
+
+            // for ed points grade
+            if(ed >= 95 && ed <= 100)
+            document.getElementById("gdpt3").textContent = '10';
+            else if(ed >= 90 && ed < 95)
+            document.getElementById("gdpt3").textContent = '9.5';
+            else if(ed >= 80 && ed < 90)
+            document.getElementById("gdpt3").textContent = '9';
+            else if(ed >= 70 && ed < 80)
+            document.getElementById("gdpt3").textContent = '8';
+            else if(ed >= 60 && ed < 70)
+            document.getElementById("gdpt3").textContent = '7';
+            else if(ed >= 50 && ed < 60)
+            document.getElementById("gdpt3").textContent = '6';
+            else if(ed >= 40 && ed > 50)
+            document.getElementById("gdpt3").textContent = '5';
+            else if(ed >= 30 && ed <40)
+            document.getElementById("gdpt3").textContent = '4';
+            else if(ed >= 20 && ed <30)
+            document.getElementById("gdpt3").textContent = '3';
+            else if(ed >= 10 && ed <20)
+            document.getElementById("gdpt3").textContent = '2';
+            else if(ed >= 1 && ed <10)
+            document.getElementById("gdpt3").textContent = '1';
+            else
+            document.getElementById("gdpt3").textContent ='0'
+           
+            // script for result to shoe if passed or failed
+            if(per >= 40 && per <= 100)
+            document.getElementById("res").textContent = 'Pass';
+            else 
+            document.getElementById("res").textContent = 'Fail'
+
+
+          
+           
+        } 
+        // To display date in dd/mm/yy format
+            let today = new Date();
+
+      var todaydate =today.getDate();
+      var month=today.getMonth();
+      month=month+1;
+      var year =today.getFullYear();
+      document.getElementById("time").textContent = todaydate+"/"+month+"/"+year;
+
+    </script>
+</body>
+
+</html>
